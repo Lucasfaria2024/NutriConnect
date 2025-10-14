@@ -10,14 +10,13 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@NoArgsConstructor // cria um construtor vazio
-@AllArgsConstructor // cria um construtor com todos os campos
-public class Paciente {
-
+@NoArgsConstructor
+@AllArgsConstructor
+public class InfoProduto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private Double preco;
+    private String descricao;
     private String nome;
-    private String email;
 }

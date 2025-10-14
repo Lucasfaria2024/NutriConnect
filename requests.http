@@ -1,0 +1,42 @@
+## Listar todos os pacientes
+GET https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/pacientes
+
+### Buscar paciente por ID
+GET https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/pacientes/1
+
+### Criar um novo paciente
+POST https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/pacientes
+Content-Type: application/json
+
+{
+    "nome": "Ana Beatriz",
+    "email": "ana.beatriz@email.com"
+}
+
+### Atualizar um paciente existente (ID 1)
+PUT https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/pacientes/1
+Content-Type: application/json
+
+{
+    "nome": "Ana Beatriz Souza",
+    "email": "ana.souza@email.com"
+}
+
+### Deletar um paciente existente (ID 1)
+DELETE https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/pacientes/1
+
+####################################################################################
+
+                    ######      TESTE INFOPRODUTOS   ######
+
+####################################################################################
+
+### Criar um novo Infoproduto
+POST https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/infoprodutos
+Content-Type: application/json
+
+{
+    "nome": "E-book Receitas Fit",
+    "descricao": "Um guia completo com 50 receitas saudáveis.",
+    "preco": 49.90
+}
