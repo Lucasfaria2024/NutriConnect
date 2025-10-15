@@ -40,3 +40,16 @@ Content-Type: application/json
     "descricao": "Um guia completo com 50 receitas saudáveis.",
     "preco": 49.90
 }
+
+### buscar infoprodutos na lista
+GET https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/infoprodutos
+
+### put para mudar o valor do infoproduto
+PUT https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/infoprodutos/1
+Content-Type: application/json
+
+{
+    "nome": "E-book Receitas Fit",
+    "descricao": "Um guia completo com 50 receitas saudáveis",
+    "preco": 59.90
+}
