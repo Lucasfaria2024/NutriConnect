@@ -53,3 +53,34 @@ Content-Type: application/json
     "descricao": "Um guia completo com 50 receitas saudáveis",
     "preco": 59.90
 }
+
+###############################################################
+        ###          TESTES CONSULTAS         ###
+#################################################################
+
+### criar uma nova consulta para o paciente com ID 1
+POST https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/consultas
+Content-Type: application/json 
+
+{
+    "dataConsulta": "2025-10-15",
+    "anotacoes" :"Primeira consulta de avaliação. Paciente relata baixa energia ao acordar",
+    "paciente": {
+        "id": 1
+    }
+}
+
+### metodo para buscar todo o relatório de consulta do cliente
+GET  https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/consultas/paciente/1
+
+### metodo para mudar o texto das anotacoes
+PUT https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/consultas/1
+Content-Type: application/json
+
+{
+    "anotacoes": "Paciente relatou melhora de energia",
+    "dataConsulta": "2025-10-15"
+}
+
+### deletar uma consulta
+DELETE https://legendary-broccoli-jjr44rxrgvv425x5v-8080.app.github.dev/consultas/1
